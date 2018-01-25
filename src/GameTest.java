@@ -5,21 +5,21 @@ public class GameTest
 	public static void main( String[] args )
 	{
 		int control = 0;
-		String leLinha;
+		String readLine;
 
 		Knight knight = new Knight();
 
-		Scanner entrada = new Scanner( System.in );
+		Scanner input = new Scanner( System.in );
 
 		System.out.println( "Type your character name:" );
-		leLinha = entrada.nextLine();
-		knight.setCharacterName( leLinha );
+		readLine = input.nextLine();
+		knight.setCharacterName( readLine );
 		System.out.println( "\nAre you sure? (yes or no)" );
-		leLinha = entrada.nextLine();
+		readLine = input.nextLine();
 		
 		while( control != 1 )
 		{
-			switch( leLinha )
+			switch( readLine )
 			{
 				case "yes" :
 					System.out.println( "\nThen your name is: " + knight.getCharacterName() );
@@ -28,11 +28,11 @@ public class GameTest
 
 				default :
 					System.out.println( "\nType your character name:" );
-					leLinha = entrada.nextLine();
-					knight.setCharacterName( leLinha );
+					readLine = input.nextLine();
+					knight.setCharacterName( readLine );
 					System.out.println( "\nAre you sure? (yes or no)" );
-					leLinha = entrada.nextLine();
-					if( leLinha.equals( "yes" ) )
+					readLine = input.nextLine();
+					if( readLine.equals( "yes" ) )
 					{
 						System.out.println( "\nThen your name is: " + knight.getCharacterName() );
 						control = 1;
