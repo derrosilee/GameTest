@@ -19,9 +19,16 @@ public class GameTest
 			knight.setCharacterName( readName );
 			System.out.println( "\nAre you sure? (yes or no)" );
 			readLine = input.nextLine();
-			System.out.println(  );
+			System.out.println();
 		}
 		while( readLine.equals( "no" ) );
+
+		System.out.println( "Now, lets generate your character stats." );
+		knight.printStats();
+		System.out.println();
+		knight.generateStats();
+		System.out.println();
+		knight.printStats();
 
 	}
 }
