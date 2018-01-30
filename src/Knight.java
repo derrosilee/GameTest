@@ -1,42 +1,37 @@
-import java.util.Random;
 
-public class Knight
+public class Knight extends Character
 {
-	private static final Random randomDice = new Random();
-
-	private String	characterName;
-	private int			strenght			= 5;
-	private int			dexterity			= 3;
-	private int			intelligence	= 2;
-
-	public String getCharacterName()
+	@Override
+	public void setClassAtributes()
 	{
-		return characterName;
+		this.strenght = 5;
+		this.dexterity = 3;
+		this.intelligence = 2;
 	}
-
-	public void setCharacterName( String characterName )
-	{
-		this.characterName = characterName;
-	}
-
+	
+	@Override
 	public void printStats()
 	{
-		if( strenght == 5 && dexterity == 3 && intelligence == 2 )
 		{
-			System.out.println( "==========Knight basic stats:" );
-			System.out.printf( "Strenght: %5d\n", this.strenght );
-			System.out.printf( "Dexterity: %4d\n", this.dexterity );
-			System.out.printf( "Inteligence: %2d\n", this.intelligence );
+			if( strenght == 5 && dexterity == 3 && intelligence == 2 )
+			{
+				System.out.println( "==========Knight basic stats:" );
+				System.out.printf( "Strenght: %5d\n", this.strenght );
+				System.out.printf( "Dexterity: %4d\n", this.dexterity );
+				System.out.printf( "Inteligence: %2d\n", this.intelligence );
+			}
+			else
+			{
+				System.out.println( "==========Knight new stats:" );
+				System.out.printf( "Strenght: %5d\n", this.strenght );
+				System.out.printf( "Dexterity: %4d\n", this.dexterity );
+				System.out.printf( "Inteligence: %2d\n", this.intelligence );
+			}
 		}
-		else
-		{
-			System.out.println( "==========Knight new stats:" );
-			System.out.printf( "Strenght: %5d\n", this.strenght );
-			System.out.printf( "Dexterity: %4d\n", this.dexterity );
-			System.out.printf( "Inteligence: %2d\n", this.intelligence );
-		}
+
 	}
 
+	@Override
 	public void generateStats()
 	{
 		int d6;
