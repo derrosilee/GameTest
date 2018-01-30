@@ -24,6 +24,7 @@ public class GameTest
 		while( readLine.equals( "no" ) );
 
 		System.out.println( "Now, lets generate your character stats." );
+		knight.setClassAtributes();
 		knight.printStats();
 		System.out.println();
 		knight.generateStats();
