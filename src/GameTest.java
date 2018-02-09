@@ -9,9 +9,9 @@ public class GameTest
 		String readName;
 		String readLine;
 
-		Character knight = new Knight();
-		Character mage = new Mage();
-		Character archer = new Archer();
+		Knight knight = new Knight();
+		Mage mage = new Mage();
+		Archer archer = new Archer();
 
 		input = new Scanner( System.in );
 
@@ -33,10 +33,13 @@ public class GameTest
 		knight.generateStats();
 		System.out.println();
 		knight.printStats();
+		System.out.println( "\nEquipping your knight with a Wood Sword (Strenght + 3)" );
+		knight.setWoodSword();
+		knight.printStats();
 
 		do
 		{
-			System.out.println( "Type your mage character name:" );
+			System.out.println( "\nType your mage character name:" );
 			readName = input.nextLine();
 			mage.setCharacterName( readName );
 			System.out.println( "\nAre you sure? (yes or no)" );
@@ -55,7 +58,7 @@ public class GameTest
 
 		do
 		{
-			System.out.println( "Type your archer character name:" );
+			System.out.println( "\nType your archer character name:" );
 			readName = input.nextLine();
 			archer.setCharacterName( readName );
 			System.out.println( "\nAre you sure? (yes or no)" );

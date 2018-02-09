@@ -6,7 +6,7 @@ public abstract class Character
 
 	protected String	characterName;
 	protected String	className;
-	protected int			strenght;
+	protected int			strength;
 	protected int			dexterity;
 	protected int			intelligence;
 
@@ -19,7 +19,7 @@ public abstract class Character
 	{
 		this.characterName = characterName;
 	}
-
+	
 	public abstract void printStats();
 
 	public void generateStats()
@@ -29,7 +29,7 @@ public abstract class Character
 		System.out.println( "A six faces dice will be used to generate your new stats\n" );
 		System.out.println( "==========Generating new stats:" );
 		d6 = 1 + randomDice.nextInt( 6 );
-		this.strenght += d6;
+		this.strength += d6;
 		System.out.printf( "Strenght     +%d\n", d6 );
 		d6 = 1 + randomDice.nextInt( 6 );
 		this.dexterity += d6;

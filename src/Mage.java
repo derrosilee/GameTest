@@ -1,21 +1,21 @@
 
-public class Mage extends Character
+public class Mage extends Character implements WoodStaff
 {
 
 	@Override
 	public void printStats()
 	{
-		if( strenght == 2 && dexterity == 3 && intelligence == 5 )
+		if( strength == 2 && dexterity == 3 && intelligence == 5 )
 		{
 			System.out.printf( "==========%s basic stats:\n", this.className );
-			System.out.printf( "Strenght: %5d\n", this.strenght );
+			System.out.printf( "Strenght: %5d\n", this.strength );
 			System.out.printf( "Dexterity: %4d\n", this.dexterity );
 			System.out.printf( "Inteligence: %2d\n", this.intelligence );
 		}
 		else
 		{
 			System.out.printf( "==========%s new stats:\n", this.className );
-			System.out.printf( "Strenght: %5d\n", this.strenght );
+			System.out.printf( "Strenght: %5d\n", this.strength );
 			System.out.printf( "Dexterity: %4d\n", this.dexterity );
 			System.out.printf( "Inteligence: %2d\n", this.intelligence );
 		}
@@ -25,9 +25,17 @@ public class Mage extends Character
 	public void setClassAtributes()
 	{
 		this.className = "Mage";
-		this.strenght = 2;
+		this.strength = 2;
 		this.dexterity = 3;
 		this.intelligence = 5;
+	}
+
+	@Override
+	public void setWoodStaff()
+	{
+		int STR = 1;
+		this.strength += STR;
+
 	}
 
 }
