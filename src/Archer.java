@@ -1,7 +1,9 @@
 
-public class Archer extends Character implements WoodBow
+public class Archer extends Character
 {
 
+	Bow bow = new Bow();
+	
 	@Override
 	public void printStats()
 	{
@@ -30,11 +32,24 @@ public class Archer extends Character implements WoodBow
 		this.intelligence = 2;
 	}
 
-	@Override
-	public void setWoodBow()
+	public void setShortWoodBow()
 	{
-		int STR = 2;
-		this.strength += STR;
+		this.strength += bow.shortWoodBow();
+	}
+	
+	public void setShortBronzeBow()
+	{
+		this.strength += bow.shortBronzeBow();
+	}
+	
+	public void setShortIronBow()
+	{
+		this.strength += bow.shortIronBow();
+	}
+	
+	public void setShortSteelBow()
+	{
+		this.strength += bow.shortSteelBow();
 	}
 	
 

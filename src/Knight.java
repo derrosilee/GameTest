@@ -1,6 +1,8 @@
 
-public class Knight extends Character implements WoodSword
+public class Knight extends Character
 {
+	Sword sword = new Sword();
+	
 	@Override
 	public void setClassAtributes()
 	{
@@ -43,11 +45,25 @@ public class Knight extends Character implements WoodSword
 			System.out.printf( "Inteligence: %2d\n", this.intelligence );
 		}
 	}
-	
-	@Override
+				
 	public void setWoodSword()
 	{
-		int STR = 3;
-		this.strength += STR;
+		this.strength += sword.woodSword();
 	}
+	
+	public void setBronzeSword()
+	{
+		this.strength += sword.bronzeSword();
+	}
+	
+	public void setIronSword()
+	{
+		this.strength += sword.ironSword();
+	}
+	
+	public void setSteelSword()
+	{
+		this.strength += sword.steelSword();
+	}
+	
 }

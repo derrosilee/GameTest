@@ -12,6 +12,8 @@ public class GameTest
 		Knight knight = new Knight();
 		Mage mage = new Mage();
 		Archer archer = new Archer();
+		
+		Sword sword = new Sword();
 
 		input = new Scanner( System.in );
 
@@ -33,7 +35,7 @@ public class GameTest
 		knight.generateStats();
 		System.out.println();
 		knight.printStats();
-		System.out.println( "\nEquipping your knight with a Wood Sword (Strenght + 3)" );
+		System.out.printf( "\nEquipping your knight with a Wood Sword (Strenght + %d)\n", sword.woodSword() );
 		knight.setWoodSword();
 		knight.printStats();
 

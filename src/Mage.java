@@ -1,7 +1,9 @@
 
-public class Mage extends Character implements WoodStaff
+public class Mage extends Character
 {
 
+	Staff staff = new Staff();
+	
 	@Override
 	public void printStats()
 	{
@@ -30,12 +32,23 @@ public class Mage extends Character implements WoodStaff
 		this.intelligence = 5;
 	}
 
-	@Override
 	public void setWoodStaff()
 	{
-		int STR = 1;
-		this.strength += STR;
-
+		this.strength += staff.woodStaff();
 	}
 
+	public void setBronzeStaff()
+	{
+		this.strength += staff.bronzeStaff();
+	}
+	
+	public void setIronStaff()
+	{
+		this.strength += staff.ironStaff();
+	}
+	
+	public void setSteelStaff()
+	{
+		this.strength += staff.steelStaff();
+	}
 }
