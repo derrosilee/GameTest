@@ -3,25 +3,6 @@ public class Mage extends Character
 {
 
 	Staff staff = new Staff();
-	
-	@Override
-	public void printStats()
-	{
-		if( strength == 2 && dexterity == 3 && intelligence == 5 )
-		{
-			System.out.printf( "==========%s basic stats:\n", this.className );
-			System.out.printf( "Strenght: %5d\n", this.strength );
-			System.out.printf( "Dexterity: %4d\n", this.dexterity );
-			System.out.printf( "Inteligence: %2d\n", this.intelligence );
-		}
-		else
-		{
-			System.out.printf( "==========%s new stats:\n", this.className );
-			System.out.printf( "Strenght: %5d\n", this.strength );
-			System.out.printf( "Dexterity: %4d\n", this.dexterity );
-			System.out.printf( "Inteligence: %2d\n", this.intelligence );
-		}
-	}
 
 	@Override
 	public void setClassAtributes()
@@ -30,6 +11,15 @@ public class Mage extends Character
 		this.strength = 2;
 		this.dexterity = 3;
 		this.intelligence = 5;
+	}
+
+	@Override
+	public void printBasicStats()
+	{
+		System.out.printf( "==========%s basic stats:\n", this.className );
+		System.out.println( "Strenght:     2" );
+		System.out.println( "Dexterity:    3" );
+		System.out.println( "Inteligence:  5" );
 	}
 
 	public void setWoodStaff()
@@ -41,12 +31,12 @@ public class Mage extends Character
 	{
 		this.strength += staff.bronzeStaff();
 	}
-	
+
 	public void setIronStaff()
 	{
 		this.strength += staff.ironStaff();
 	}
-	
+
 	public void setSteelStaff()
 	{
 		this.strength += staff.steelStaff();

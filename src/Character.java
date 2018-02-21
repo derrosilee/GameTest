@@ -19,8 +19,18 @@ public abstract class Character
 	{
 		this.characterName = characterName;
 	}
-	
-	public abstract void printStats();
+
+	public abstract void printBasicStats();
+
+	public abstract void setClassAtributes();
+
+	public void printStats()
+	{
+		System.out.printf( "==========%s new stats:\n", this.className );
+		System.out.printf( "Strenght: %5d\n", this.strength );
+		System.out.printf( "Dexterity: %4d\n", this.dexterity );
+		System.out.printf( "Inteligence: %2d\n", this.intelligence );
+	}
 
 	public void generateStats()
 	{
@@ -39,5 +49,4 @@ public abstract class Character
 		System.out.printf( "Intelligence +%d\n", d6 );
 	}
 
-	public abstract void setClassAtributes();
 }

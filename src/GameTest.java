@@ -30,7 +30,7 @@ public class GameTest
 
 		System.out.printf( "\n\nNow, lets generate %s character stats.\n", knight.characterName );
 		knight.setClassAtributes();
-		knight.printStats();
+		knight.printBasicStats();
 		System.out.println();
 		knight.generateStats();
 		System.out.println();
@@ -52,7 +52,7 @@ public class GameTest
 
 		System.out.printf( "\n\nNow, lets generate %s character stats.\n", mage.characterName );
 		mage.setClassAtributes();
-		mage.printStats();
+		mage.printBasicStats();
 		System.out.println();
 		mage.generateStats();
 		System.out.println();
@@ -71,7 +71,7 @@ public class GameTest
 
 		System.out.printf( "\n\nNow, lets generate %s character stats.\n", archer.characterName );
 		archer.setClassAtributes();
-		archer.printStats();
+		archer.printBasicStats();
 		System.out.println();
 		archer.generateStats();
 		System.out.println();
