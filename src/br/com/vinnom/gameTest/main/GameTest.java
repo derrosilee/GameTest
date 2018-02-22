@@ -1,4 +1,8 @@
+package br.com.vinnom.gameTest.main;
 import java.util.Scanner;
+
+import br.com.vinnom.gameTest.character.*;
+import br.com.vinnom.gameTest.weapons.*;
 
 public class GameTest
 {

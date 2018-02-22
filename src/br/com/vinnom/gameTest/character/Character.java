@@ -1,14 +1,15 @@
+package br.com.vinnom.gameTest.character;
 import java.util.Random;
 
 public abstract class Character
 {
 	protected static final Random randomDice = new Random();
 
-	protected String	characterName;
-	protected String	className;
-	protected int			strength;
-	protected int			dexterity;
-	protected int			intelligence;
+	public String	characterName;
+	public String	className;
+	public int			strength;
+	public int			dexterity;
+	public int			intelligence;
 
 	public String getCharacterName()
 	{

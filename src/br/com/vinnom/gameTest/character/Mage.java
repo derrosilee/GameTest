@@ -1,3 +1,5 @@
+package br.com.vinnom.gameTest.character;
+import br.com.vinnom.gameTest.weapons.Staff;
 
 public class Mage extends Character
 {

@@ -1,3 +1,4 @@
+package br.com.vinnom.gameTest.weapons;
 
 public class Bow
 {

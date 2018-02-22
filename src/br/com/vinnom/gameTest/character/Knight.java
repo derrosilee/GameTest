@@ -1,3 +1,5 @@
+package br.com.vinnom.gameTest.character;
+import br.com.vinnom.gameTest.weapons.Sword;
 
 public class Knight extends Character
 {
