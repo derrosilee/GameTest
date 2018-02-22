@@ -8,15 +8,35 @@ import br.com.vinnom.gameTest.weapons.*;
 public class GameTest
 {
 	private static Scanner input;
+	
+	private static Knight knight = new Knight();
 
 	public static void main( String[] args )
 	{
-		Knight knight = new Knight();
+		createKnight();
+	}
+	
+	static String confirmName()
 
-		Sword sword = new Sword();
-
+	{
+		String readName;
+		String readLine;
+		
 		input = new Scanner( System.in );
 		
+		do
+		{
+			System.out.println( "Type your character name" );
+			readName = input.nextLine();
+			System.out.println( "Are you sure?" );
+			readLine = input.nextLine();
+		}
+		while( ! readLine.equals( "yes" ) );
+		return readName;
+	}
+	
+	static void createKnight()
+	{
 		knight.characterName = confirmName();
 
 		System.out.printf( "\n\nNow, lets generate %s stats.\n", knight.characterName );
@@ -26,26 +46,5 @@ public class GameTest
 		knight.generateStats();
 		System.out.println();
 		knight.printStats();
-		System.out.printf( "\nEquipping your knight with a Wood Sword (Strenght + %d)\n", sword.woodSword() );
-		knight.setWoodSword();
-		knight.printStats();
-	}
-	
-	static String confirmName()
-
-	{
-		String readName;
-		String readLine;
-		
-		do
-		{
-			System.out.println( "Type your character name" );
-			readName = input.nextLine();
-			System.out.println( "Are you sure?" );
-			readLine = input.nextLine();
-			System.out.println( "readName = " + readName + " readLine = " + readLine );
-		}
-		while( ! readLine.equals( "yes" ) );
-		return readName;
 	}
 }
