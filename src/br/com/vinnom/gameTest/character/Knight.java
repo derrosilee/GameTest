@@ -1,10 +1,14 @@
 package br.com.vinnom.gameTest.character;
 
+import br.com.vinnom.gameTest.armor.Chest;
 import br.com.vinnom.gameTest.weapons.Sword;
 
 public class Knight extends Character
 {
-	Sword sword = new Sword();
+	private Sword sword = new Sword();
+	
+	private Chest chest = new Chest();
+	
 
 	@Override
 	public void setClassAtributes()
@@ -46,4 +50,8 @@ public class Knight extends Character
 		this.strength += sword.steelSword();
 	}
 
+	public void setLeatherClothes()
+	{
+		this.resistance += chest.leatherClothes();
+	}
 }
