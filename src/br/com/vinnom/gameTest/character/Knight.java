@@ -1,4 +1,5 @@
 package br.com.vinnom.gameTest.character;
+
 import br.com.vinnom.gameTest.weapons.Sword;
 
 public class Knight extends Character
@@ -10,6 +11,7 @@ public class Knight extends Character
 	{
 		this.className = "Knight";
 		this.strength = 5;
+		this.resistance = 4;
 		this.dexterity = 3;
 		this.intelligence = 2;
 	}
@@ -19,6 +21,7 @@ public class Knight extends Character
 	{
 		System.out.printf( "==========%s basic stats:\n", this.className );
 		System.out.println( "Strenght:     5" );
+		System.out.println( "Resistance:   4" );
 		System.out.println( "Dexterity:    3" );
 		System.out.println( "Inteligence:  2" );
 	}
