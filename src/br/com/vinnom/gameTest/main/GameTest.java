@@ -1,4 +1,5 @@
 package br.com.vinnom.gameTest.main;
+
 import java.util.Scanner;
 
 import br.com.vinnom.gameTest.character.*;
@@ -10,29 +11,15 @@ public class GameTest
 
 	public static void main( String[] args )
 	{
-		String readName;
-		String readLine;
-
 		Knight knight = new Knight();
-		Mage mage = new Mage();
-		Archer archer = new Archer();
-		
+
 		Sword sword = new Sword();
 
 		input = new Scanner( System.in );
+		
+		knight.characterName = confirmName();
 
-		do
-		{
-			System.out.println( "Type your knight character name:" );
-			readName = input.nextLine();
-			knight.setCharacterName( readName );
-			System.out.println( "\nAre you sure? (yes or no)" );
-			readLine = input.nextLine();
-			System.out.println();
-		}
-		while( readLine.equals( "no" ) );
-
-		System.out.printf( "\n\nNow, lets generate %s character stats.\n", knight.characterName );
+		System.out.printf( "\n\nNow, lets generate %s stats.\n", knight.characterName );
 		knight.setClassAtributes();
 		knight.printBasicStats();
 		System.out.println();
@@ -42,44 +29,23 @@ public class GameTest
 		System.out.printf( "\nEquipping your knight with a Wood Sword (Strenght + %d)\n", sword.woodSword() );
 		knight.setWoodSword();
 		knight.printStats();
+	}
+	
+	static String confirmName()
 
+	{
+		String readName;
+		String readLine;
+		
 		do
 		{
-			System.out.println( "\nType your mage character name:" );
+			System.out.println( "Type your character name" );
 			readName = input.nextLine();
-			mage.setCharacterName( readName );
-			System.out.println( "\nAre you sure? (yes or no)" );
+			System.out.println( "Are you sure?" );
 			readLine = input.nextLine();
-			System.out.println();
+			System.out.println( "readName = " + readName + " readLine = " + readLine );
 		}
-		while( readLine.equals( "no" ) );
-
-		System.out.printf( "\n\nNow, lets generate %s character stats.\n", mage.characterName );
-		mage.setClassAtributes();
-		mage.printBasicStats();
-		System.out.println();
-		mage.generateStats();
-		System.out.println();
-		mage.printStats();
-
-		do
-		{
-			System.out.println( "\nType your archer character name:" );
-			readName = input.nextLine();
-			archer.setCharacterName( readName );
-			System.out.println( "\nAre you sure? (yes or no)" );
-			readLine = input.nextLine();
-			System.out.println();
-		}
-		while( readLine.equals( "no" ) );
-
-		System.out.printf( "\n\nNow, lets generate %s character stats.\n", archer.characterName );
-		archer.setClassAtributes();
-		archer.printBasicStats();
-		System.out.println();
-		archer.generateStats();
-		System.out.println();
-		archer.printStats();
-
+		while( ! readLine.equals( "yes" ) );
+		return readName;
 	}
 }
