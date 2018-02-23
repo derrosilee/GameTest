@@ -1,10 +1,14 @@
 package br.com.vinnom.gameTest.character;
+
+import br.com.vinnom.gameTest.armor.Chest;
 import br.com.vinnom.gameTest.weapons.Staff;
 
 public class Mage extends Character
 {
 
 	Staff staff = new Staff();
+
+	Chest chest = new Chest();
 
 	@Override
 	public void setClassAtributes()
@@ -42,5 +46,10 @@ public class Mage extends Character
 	public void setSteelStaff()
 	{
 		this.strength += staff.steelStaff();
+	}
+
+	public void setLeatherClothes()
+	{
+		this.resistance += chest.leatherClothes();
 	}
 }

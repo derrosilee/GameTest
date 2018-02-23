@@ -1,10 +1,13 @@
 package br.com.vinnom.gameTest.character;
+
+import br.com.vinnom.gameTest.armor.Chest;
 import br.com.vinnom.gameTest.weapons.Bow;
 
 public class Archer extends Character
 {
 
-	Bow bow = new Bow();
+	Bow		bow		= new Bow();
+	Chest	chest	= new Chest();
 
 	@Override
 	public void setClassAtributes()
@@ -42,6 +45,11 @@ public class Archer extends Character
 	public void setShortSteelBow()
 	{
 		this.strength += bow.shortSteelBow();
+	}
+
+	public void setLeatherClothes()
+	{
+		this.resistance += chest.leatherClothes();
 	}
 
 }
