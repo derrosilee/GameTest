@@ -50,6 +50,6 @@ public class Mage extends Character
 
 	public void setLeatherClothes()
 	{
-		this.resistance += chest.leatherClothes();
+    this.resistance += chest.leatherClothes();
 	}
 }

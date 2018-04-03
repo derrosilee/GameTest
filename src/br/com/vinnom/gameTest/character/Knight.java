@@ -50,8 +50,8 @@ public class Knight extends Character
 		this.strength += sword.steelSword();
 	}
 
-	public void setLeatherClothes()
-	{
-		this.resistance += chest.leatherClothes();
-	}
+  public void setLeatherClothes()
+  {
+    this.resistance += chest.leatherClothes();
+  }
 }

@@ -4,10 +4,10 @@ import br.com.vinnom.gameTest.character.CharacterManipulations;
 
 public class GameTest
 {
-	public static void main( String[] args )
-	{
-		CharacterManipulations characterManipulations = new CharacterManipulations();
-		
-		characterManipulations.chooseCharacterClass();
-	}
+  public static void main( String[] args )
+  {
+    CharacterManipulations characterManipulations = new CharacterManipulations();
+
+    characterManipulations.chooseCharacterClass();
+  }
 }
