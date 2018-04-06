@@ -13,16 +13,17 @@ public class Mage extends Character
 	@Override
 	public void setClassAtributes()
 	{
-		this.className = "Mage";
-		this.strength = 2;
-		this.dexterity = 3;
-		this.intelligence = 5;
+		super.setClassName( "Mage" );
+		super.setStrength( 2 );
+		super.setResistance( 2 );
+		super.setDexterity( 3 );
+		super.setIntelligence( 5 );
 	}
 
 	@Override
 	public void printBasicStats()
 	{
-		System.out.printf( "==========%s basic stats:\n", this.className );
+		System.out.printf( "==========%s basic stats:\n", super.getClassName() );
 		System.out.println( "Strenght:     2" );
 		System.out.println( "Dexterity:    3" );
 		System.out.println( "Inteligence:  5" );
@@ -30,26 +31,26 @@ public class Mage extends Character
 
 	public void setWoodStaff()
 	{
-		this.strength += staff.woodStaff();
+		super.setStrength( super.getStrength() + staff.woodStaff() );
 	}
 
 	public void setBronzeStaff()
 	{
-		this.strength += staff.bronzeStaff();
+	  super.setStrength( super.getStrength() + staff.bronzeStaff() );
 	}
 
 	public void setIronStaff()
 	{
-		this.strength += staff.ironStaff();
+	  super.setStrength( super.getStrength() + staff.ironStaff() );
 	}
 
 	public void setSteelStaff()
 	{
-		this.strength += staff.steelStaff();
+	  super.setStrength( super.getStrength() + staff.steelStaff() );
 	}
 
 	public void setLeatherClothes()
 	{
-    this.resistance += chest.leatherClothes();
+    super.setResistance( super.getResistance() + chest.leatherClothes() );
 	}
 }

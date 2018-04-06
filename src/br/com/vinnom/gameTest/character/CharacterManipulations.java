@@ -40,16 +40,16 @@ public class CharacterManipulations
 
   static void createKnight()
   {
-    knight.characterName = confirmName();
+    knight.setCharacterName( confirmName() );
 
-    System.out.printf( "\n\nNow, lets generate %s stats.\n", knight.characterName );
+    System.out.printf( "\n\nNow, lets generate %s stats.\n", knight.getCharacterName() );
     knight.setClassAtributes();
     knight.printBasicStats();
     System.out.println();
     knight.generateStats();
     System.out.println();
     knight.printStats();
-    System.out.printf( "\nEquipping %s with a Wood Sword (Strenght + %d)", knight.characterName, sword.woodSword() );
+    System.out.printf( "\nEquipping %s with a Wood Sword (Strenght + %d)", knight.getCharacterName(), sword.woodSword() );
     System.out.printf( " and Leather Clothes (Resistance + %d)\n", chest.leatherClothes() );
     knight.setWoodSword();
     knight.setLeatherClothes();
@@ -58,16 +58,16 @@ public class CharacterManipulations
 
   static void createMage()
   {
-    mage.characterName = confirmName();
+    mage.setCharacterName( confirmName() );
 
-    System.out.printf( "\n\nNow, lets generate %s stats.\n", mage.characterName );
+    System.out.printf( "\n\nNow, lets generate %s stats.\n", mage.getCharacterName() );
     mage.setClassAtributes();
     mage.printBasicStats();
     System.out.println();
     mage.generateStats();
     System.out.println();
     mage.printStats();
-    System.out.printf( "\nEquipping %s with a Wood Staff (Strenght + %d)", mage.characterName, staff.woodStaff() );
+    System.out.printf( "\nEquipping %s with a Wood Staff (Strenght + %d)", mage.getCharacterName(), staff.woodStaff() );
     System.out.printf( " and Leather Clothes (Resistance + %d)\n", chest.leatherClothes() );
     mage.setWoodStaff();
     mage.setLeatherClothes();
@@ -76,16 +76,16 @@ public class CharacterManipulations
 
   static void createArcher()
   {
-    archer.characterName = confirmName();
+    archer.setCharacterName( confirmName() );
 
-    System.out.printf( "\n\nNow, lets generate %s stats.\n", archer.characterName );
+    System.out.printf( "\n\nNow, lets generate %s stats.\n", archer.getCharacterName() );
     archer.setClassAtributes();
     archer.printBasicStats();
     System.out.println();
     archer.generateStats();
     System.out.println();
     archer.printStats();
-    System.out.printf( "\nEquipping %s with a Short Wood Bow (Strenght + %d)", archer.characterName,
+    System.out.printf( "\nEquipping %s with a Short Wood Bow (Strenght + %d)", archer.getCharacterName(),
         bow.shortWoodBow() );
     System.out.printf( " and Leather Clothes (Resistance + %d)\n", chest.leatherClothes() );
     archer.setShortWoodBow();

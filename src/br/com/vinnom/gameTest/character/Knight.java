@@ -13,17 +13,17 @@ public class Knight extends Character
 	@Override
 	public void setClassAtributes()
 	{
-		this.className = "Knight";
-		this.strength = 5;
-		this.resistance = 4;
-		this.dexterity = 3;
-		this.intelligence = 2;
+		super.setClassName( "Knight" );
+		super.setStrength( 5 );
+		super.setResistance( 4 );
+		super.setDexterity( 3 );
+		super.setIntelligence( 2 );
 	}
 
 	@Override
 	public void printBasicStats()
 	{
-		System.out.printf( "==========%s basic stats:\n", this.className );
+		System.out.printf( "==========%s basic stats:\n", super.getClassName() );
 		System.out.println( "Strenght:     5" );
 		System.out.println( "Resistance:   4" );
 		System.out.println( "Dexterity:    3" );
@@ -32,26 +32,26 @@ public class Knight extends Character
 
 	public void setWoodSword()
 	{
-		this.strength += sword.woodSword();
+		super.setStrength( super.getStrength() + sword.woodSword() );
 	}
 
 	public void setBronzeSword()
 	{
-		this.strength += sword.bronzeSword();
+		super.setStrength( super.getStrength() + sword.bronzeSword() );
 	}
 
 	public void setIronSword()
 	{
-		this.strength += sword.ironSword();
+	  super.setStrength( super.getStrength() + sword.ironSword() );
 	}
 
 	public void setSteelSword()
 	{
-		this.strength += sword.steelSword();
+	  super.setStrength( super.getStrength() + sword.steelSword() );
 	}
 
   public void setLeatherClothes()
   {
-    this.resistance += chest.leatherClothes();
+    super.setResistance( super.getResistance() + chest.leatherClothes() );
   }
 }

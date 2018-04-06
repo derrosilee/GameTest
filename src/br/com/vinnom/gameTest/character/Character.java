@@ -6,12 +6,62 @@ public abstract class Character
 {
   protected static final Random randomDice = new Random();
 
-  public String characterName;
-  public String className;
-  public int    strength;
-  public int    resistance;
-  public int    dexterity;
-  public int    intelligence;
+  private String characterName;
+  private String className;
+  private int    strength;
+  private int    resistance;
+  private int    dexterity;
+  private int    intelligence;
+
+  public String getClassName()
+  {
+    return className;
+  }
+
+  public void setClassName( String className )
+  {
+    this.className = className;
+  }
+
+  public int getStrength()
+  {
+    return strength;
+  }
+
+  public void setStrength( int strength )
+  {
+    this.strength = strength;
+  }
+
+  public int getResistance()
+  {
+    return resistance;
+  }
+
+  public void setResistance( int resistance )
+  {
+    this.resistance = resistance;
+  }
+
+  public int getDexterity()
+  {
+    return dexterity;
+  }
+
+  public void setDexterity( int dexterity )
+  {
+    this.dexterity = dexterity;
+  }
+
+  public int getIntelligence()
+  {
+    return intelligence;
+  }
+
+  public void setIntelligence( int intelligence )
+  {
+    this.intelligence = intelligence;
+  }
 
   public String getCharacterName()
   {

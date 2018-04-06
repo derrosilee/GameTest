@@ -12,16 +12,17 @@ public class Archer extends Character
   @Override
   public void setClassAtributes()
   {
-    this.className = "Archer";
-    this.strength = 3;
-    this.dexterity = 5;
-    this.intelligence = 2;
+    super.setClassName( "Archer" );
+    super.setStrength( 3 );
+    super.setResistance( 3 );
+    super.setDexterity( 5 );
+    super.setIntelligence( 2 );
   }
 
   @Override
   public void printBasicStats()
   {
-    System.out.printf( "==========%s basic stats:\n", this.className );
+    System.out.printf( "==========%s basic stats:\n", super.getClassName() );
     System.out.println( "Strenght:     3" );
     System.out.println( "Dexterity:    5" );
     System.out.println( "Inteligence:  2" );
@@ -29,27 +30,27 @@ public class Archer extends Character
 
   public void setShortWoodBow()
   {
-    this.strength += bow.shortWoodBow();
+    super.setStrength( super.getStrength() + bow.shortWoodBow() );
   }
 
   public void setShortBronzeBow()
   {
-    this.strength += bow.shortBronzeBow();
+    super.setStrength( super.getStrength() + bow.shortBronzeBow() );
   }
 
   public void setShortIronBow()
   {
-    this.strength += bow.shortIronBow();
+    super.setStrength( super.getStrength() + bow.shortIronBow() );
   }
 
   public void setShortSteelBow()
   {
-    this.strength += bow.shortSteelBow();
+    super.setStrength( super.getStrength() + bow.shortSteelBow() );
   }
 
   public void setLeatherClothes()
   {
-    this.resistance += chest.leatherClothes();
+    super.setResistance( super.getResistance() + chest.leatherClothes() );
   }
 
 }
